@@ -11,6 +11,8 @@
     "packages/*"
   ],
   "scripts": {
+    "start": "scripty",
+    "dev": "scripty",
     "greet": "scripty",
     "build": "scripty",
     "clean": "scripty",
