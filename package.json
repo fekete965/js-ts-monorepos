@@ -11,7 +11,14 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "greet": "scripty",
+    "build": "scripty",
+    "clean": "scripty",
+    "lint": "scripty",
+    "test": "scripty"
+  },
+  "scripty": {
+    "path": "./scripts/workspace"
   },
   "engines": {
     "node": "20.9.0",
@@ -24,6 +31,7 @@
     "eslint": "^9.3.0",
     "globals": "^15.3.0",
     "rimraf": "^5.0.7",
+    "scripty": "^2.1.1",
     "typescript-eslint": "^7.11.0"
   }
 }
