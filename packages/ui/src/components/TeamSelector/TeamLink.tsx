@@ -1,11 +1,11 @@
 import * as React from "react";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link, useMatch } from "react-router-dom";
 import { ITeam } from "@shlack/types";
 
 const TeamLink: React.FunctionComponent<{ team: ITeam }> = ({ team }) => {
-  const match = useRouteMatch({
+  const match = useMatch({
     path: `/team/${team.id}`,
-    exact: false,
+    caseSensitive: false,
   });
 
   return (

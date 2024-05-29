@@ -12,14 +12,18 @@
     "build": "scripty",
     "test": "scripty"
   },
+  "dependencies": {
+    "@shlack/types": "2.0.0"
+  },
   "devDependencies": {
-    "@babel/preset-env": "^7.12.0",
-    "@babel/preset-typescript": "^7.12.0",
+    "@babel/preset-env": "^7.24.6",
+    "@babel/preset-typescript": "^7.24.6",
     "@types/date-fns": "^2.6.0",
-    "@types/react": "^16.9.52",
-    "typescript": "^4.0.3"
+    "@types/react": "^18.3.3",
+    "typescript": "^5.4.5"
   },
   "scripty": {
     "path": "../../scripts/packages"
-  }
+  },
+  "gitHead": "6cbbdec00d7a82bf5d1e05a0a3c4564e3a634893"
 }

@@ -1,12 +1,12 @@
 import * as React from "react";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link, useMatch } from "react-router-dom";
 import { IChannel } from "@shlack/types";
 
 const ChannelLink: React.FunctionComponent<{
   to: string;
   channel: IChannel;
 }> = ({ to, channel }) => {
-  const match = useRouteMatch(to);
+  const match = useMatch(to);
   return (
     <Link
       to={to}

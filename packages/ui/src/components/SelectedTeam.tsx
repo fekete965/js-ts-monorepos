@@ -1,23 +1,18 @@
 import * as React from "react";
-import { match } from "react-router";
 import type { ITeam } from "@shlack/types";
 import Team from "./Team";
+import { useParams } from "react-router";
 
 const SelectedTeam: React.FunctionComponent<{
-  match: match<{ teamId: string }>;
   teams: ITeam[];
-}> = ({ match, teams }) => {
-  if (!match) throw new Error("no match");
+}> = ({ teams }) => {
+  const { teamId } = useParams();
 
-  const { params } = match;
-  if (!params) throw new Error("no match params");
+  if (!teamId) throw new Error(`undefined teamId`);
 
-  const { teamId: selectedTeamId } = params;
-  if (!selectedTeamId) throw new Error(`undefined teamId`);
-
-  const selectedTeam = teams.find((t: ITeam) => t.id === selectedTeamId);
+  const selectedTeam = teams.find((t: ITeam) => t.id === teamId);
   if (!selectedTeam)
-    throw new Error(`Invalid could not find team with id {selectedTeamId}`);
+    throw new Error(`Invalid could not find team with id ${teamId}`);
 
   return <Team team={selectedTeam} />;
 };
