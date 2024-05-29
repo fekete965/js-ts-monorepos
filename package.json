@@ -14,10 +14,16 @@
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "engines": {
-    "node": "20.5.0",
+    "node": "20.9.0",
     "yarn": "1.22.19"
   },
   "devDependencies": {
-    "rimraf": "^5.0.7"
+    "@eslint/js": "^9.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^9.3.0",
+    "globals": "^15.3.0",
+    "rimraf": "^5.0.7",
+    "typescript-eslint": "^7.11.0"
   }
 }
