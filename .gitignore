@@ -117,4 +117,3 @@ dist
 .pnp.*
 **/temp
 **/temp-*
-_config.yml
